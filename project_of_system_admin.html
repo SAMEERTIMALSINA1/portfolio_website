@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta name="description" content="System Administration projects by Sameer Timalsina - Windows Server, Active Directory, networking, and infrastructure labs.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="System Administration Projects | Sameer Timalsina">
+    <meta property="og:description" content="Windows Server, Active Directory, DHCP, DNS, and networking lab projects.">
+    <meta property="og:image" content="images/general/profile_256.webp">
+    <meta property="og:type" content="website">
+
+    <!-- Referrer Policy -->
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- Title -->
+    <title>System Administration Projects | Sameer Timalsina</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/general/favicon.webp" type="image/webp">
+
+    <!-- Preload Fonts -->
+    <link rel="preload" href="fonts/poppins-v24-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/poppins-v24-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/poppins-v24-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/project_of_system_admin.css">
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-sm fixed w-full z-40 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center text-indigo-600 hover:text-indigo-700 transition-colors">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                    </svg>
+                    <span class="font-semibold">Back to Portfolio</span>
+                </a>
+                <div class="flex items-center space-x-4">
+                    <a href="project_of_python.html" class="text-gray-600 hover:text-indigo-600 transition-colors text-sm font-medium hidden sm:block">Python Projects</a>
+                    <a href="project_of_network_infrastructure.html" class="text-gray-600 hover:text-indigo-600 transition-colors text-sm font-medium hidden sm:block">Network Infrastructure</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-gradient text-white pt-24 pb-16 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center fade-in">
+                <div class="inline-block p-3 bg-white bg-opacity-20 rounded-xl mb-4">
+                    <img src="images/system_admin_photo/system_admin_project.webp" alt="system admin photo" class="w-16 h-16 object-contain">
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">System Administration Projects</h1>
+                <p class="text-xl text-indigo-100 max-w-3xl mx-auto">
+                    Hands-on experience in server configuration, Active Directory management, network services, and Windows Server infrastructure
+                </p>
+                <div class="mt-8 flex flex-wrap justify-center gap-3">
+                    <span class="px-4 py-2 bg-white bg-opacity-20 rounded-full text-sm font-medium">Windows Server 2022</span>
+                    <span class="px-4 py-2 bg-white bg-opacity-20 rounded-full text-sm font-medium">Active Directory</span>
+                    <span class="px-4 py-2 bg-white bg-opacity-20 rounded-full text-sm font-medium">DNS & DHCP</span>
+                    <span class="px-4 py-2 bg-white bg-opacity-20 rounded-full text-sm font-medium">Group Policy</span>
+                </div>
+            </div>
+        </div>
+        <!-- Wave Divider -->
+        <div class="hero-wave">
+            <svg viewBox="0 0 2880 60" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#f9fafb" d="M0,30 C360,60 1080,0 1440,30 C1800,60 2520,0 2880,30 L2880,60 L0,60 Z"/>
+            </svg>
+        </div>
+        
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+        <!-- Search Bar -->
+        <div class="mb-12">
+            <div class="max-w-2xl mx-auto relative">
+                <div class="relative">
+                    <input 
+                        type="text" 
+                        id="searchInput"
+                        placeholder="Search projects by keyword..." 
+                        class="w-full px-6 py-4 pl-12 border-2 border-gray-200 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+                        aria-label="Search projects"
+                    />
+                    <svg class="search-icon absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </div>
+                <p class="text-sm text-gray-500 mt-2 text-center">Try searching for "Active Directory", "Server", "DNS", etc.</p>
+            </div>
+        </div>
+
+        <!-- Projects Grid -->
+        <section id="projects-container" class="space-y-6">
+            
+        </section>
+
+        <!-- Skills Highlight -->
+        <section class="mt-16 bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-8 shadow-inner">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Technologies & Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-white rounded-lg p-4 text-center shadow-sm hover:shadow-md transition-shadow">
+                    <div class="text-3xl mb-2">🖥️</div>
+                    <p class="font-semibold text-gray-700">Windows Server</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 text-center shadow-sm hover:shadow-md transition-shadow">
+                    <div class="text-3xl mb-2">📁</div>
+                    <p class="font-semibold text-gray-700">Active Directory</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 text-center shadow-sm hover:shadow-md transition-shadow">
+                    <div class="text-3xl mb-2">🌐</div>
+                    <p class="font-semibold text-gray-700">DNS & DHCP</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 text-center shadow-sm hover:shadow-md transition-shadow">
+                    <div class="text-3xl mb-2">🔒</div>
+                    <p class="font-semibold text-gray-700">Security</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 text-center shadow-sm hover:shadow-md transition-shadow">
+                    <div class="text-3xl mb-2">👥</div>
+                    <p class="font-semibold text-gray-700">User Management</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 text-center shadow-sm hover:shadow-md transition-shadow">
+                    <div class="text-3xl mb-2">📋</div>
+                    <p class="font-semibold text-gray-700">Group Policy</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 text-center shadow-sm hover:shadow-md transition-shadow">
+                    <div class="text-3xl mb-2">💾</div>
+                    <p class="font-semibold text-gray-700">File Services</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 text-center shadow-sm hover:shadow-md transition-shadow">
+                    <div class="text-3xl mb-2">⚙️</div>
+                    <p class="font-semibold text-gray-700">Virtualization</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Back Button -->
+        <div class="text-center mt-12">
+            <a href="index.html#projects" class="inline-flex items-center px-8 py-4 border-2 border-indigo-600 text-indigo-600 font-semibold rounded-xl hover:bg-indigo-600 hover:text-white transition-all transform hover:scale-105 shadow-md hover:shadow-lg">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                Back to All Projects
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-16">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-gray-300">&copy; <span id="current-year"></span> Sameer Timalsina. All rights reserved.</p>
+            <p class="text-gray-400 text-sm mt-2">System Administrator | IT Professional</p>
+        </div>
+    </footer>
+
+    <script src="js/project.js" defer></script>
+    <script src="js/scripts.js" defer></script>
+    
+  </body>  
+</html>
