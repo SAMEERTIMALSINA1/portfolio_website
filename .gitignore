@@ -1,0 +1,10 @@
+# Tools and Executables
+tools/tailwind.exe
+
+# Tailwind Generated Styles
+# (Add this if your compiled/minified CSS is named output.css)
+css/output.css
+
+# Operating System Junk
+.DS_Store
+Thumbs.db
