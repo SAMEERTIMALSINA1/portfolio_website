@@ -44,15 +44,15 @@ image: "images/python_photo/data_analysis_script.webp",
 file: "assets/python/data_analysis_script.py"
 },
 
-{
-    category: "network-infrastructure",
-    title: "VLAN Configuration Lab",
-    type: "Switching • Network Segmentation",
-    description: "Configured VLANs on managed switches to segment network traffic and improve security across departments.",
-    tags: ["VLAN", "Switching", "Network Segmentation"],
-    color: "blue",
-    image: "images/network_infrastructure_photo/vlan_configuration.webp",
-    file: "assets/network_infrastructure/vlan_configuration.pdf"
+{ 
+    category: "network-infrastructure", 
+    title: "Small Office DHCP Configuration Lab", 
+    type: "Router Configuration • DHCP Server", 
+    description: "Configured a Cisco 2911 router as a DHCP server in a small office environment, enabling automatic IP address assignment to multiple PCs and verifying network connectivity.", 
+    tags: ["DHCP", "Router Configuration", "Network Simulation", "Cisco Packet Tracer"], 
+    color: "blue", 
+    image: "images/network_infrastructure_photo/small_office_simulatio.webp", 
+    file: "assets/network_infrastructure/small_office_simulation.pdf" 
 },
 
 {
