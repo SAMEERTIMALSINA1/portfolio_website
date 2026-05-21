@@ -34,14 +34,14 @@ file: "assets/system_admin/installation_of_ubuntu_server.pdf"
 },
 
 {
-category: "python",
-title: "Python Script for Data Analysis",
-type: "Data Processing • Visualization",
-description: "A Python script using pandas and matplotlib for analyzing and visualizing datasets.",
-tags: ["Python","pandas","matplotlib"],
-color: "green",
-image: "images/python_photo/data_analysis_script.webp",
-file: "assets/python/data_analysis_script.py"
+    category: "python",
+    title: "Number Guessing Game",
+    type: "CLI Game • Game Logic",
+    description: "Interactive command-line game where users guess a randomly generated number between 1-100, receiving feedback and attempt tracking.",
+    tags: ["Python", "Random Module", "CLI", "Game"],
+    color: "green",
+    image: "images/python_photo/number_guessing_game.webp",
+    file: "assets/python/number_guessing_game.py"
 },
 
 { 
@@ -53,28 +53,6 @@ file: "assets/python/data_analysis_script.py"
     color: "blue", 
     image: "images/network_infrastructure_photo/small_office_simulatio.webp", 
     file: "assets/network_infrastructure/small_office_simulation.pdf" 
-},
-
-{
-    category: "network-infrastructure",
-    title: "DNS & DHCP Server Setup",
-    type: "Network Services • Server Configuration",
-    description: "Deployed and configured DNS and DHCP services for automated IP assignment and domain name resolution.",
-    tags: ["DNS", "DHCP", "Windows Server"],
-    color: "purple",
-    image: "images/network_infrastructure_photo/dns_dhcp_setup.webp",
-    file: "assets/network_infrastructure/dns_dhcp_setup.pdf"
-},
-
-{
-    category: "network-infrastructure",
-    title: "Firewall Rules & Security Policy",
-    type: "Security • Firewall Configuration",
-    description: "Implemented inbound and outbound firewall rules to secure network perimeter and control traffic flow.",
-    tags: ["Firewall", "Security", "Network Policy"],
-    color: "orange",
-    image: "images/network_infrastructure_photo/firewall_setup.webp",
-    file: "assets/network_infrastructure/firewall_configuration.pdf"
 }
 
 ];
