@@ -1,6 +1,11 @@
 /* ===================================
    JavaScript for Portfolio Website
    ================================== */
+   if (window.trustedTypes && trustedTypes.createPolicy) {
+    trustedTypes.createPolicy('default', {
+        createHTML: string => string
+    });
+}
 
 document.addEventListener('DOMContentLoaded', () => {
 
