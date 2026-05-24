@@ -536,28 +536,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function sanitizeURL(url) {
-
-        try {
-
-            const parsed =
-                new URL(url, window.location.origin);
-
-            // Only allow secure https: URLs
-            if (parsed.protocol !== 'https:') {
-
-                return '#';
-
-            }
-
-            return parsed.href;
-
-        } catch {
-
-            return '#';
-
-        }
-
+    // Allow relative paths directly
+    if (!url.startsWith('http://') && !url.startsWith('https://')) {
+        return url;
     }
+    try {
+        const parsed = new URL(url, window.location.origin);
+        if (parsed.protocol !== 'https:' && parsed.protocol !== 'http:') {
+            return '#';
+        }
+        return parsed.href;
+    } catch {
+        return '#';
+    }
+}
 
 
     // ========================================
