@@ -51,7 +51,7 @@ file: "assets/system_admin/installation_of_ubuntu_server.pdf"
     description: "Configured a Cisco 2911 router as a DHCP server in a small office environment, enabling automatic IP address assignment to multiple PCs and verifying network connectivity.", 
     tags: ["DHCP", "Router Configuration", "Network Simulation", "Cisco Packet Tracer"], 
     color: "blue", 
-    image: "images/network_infrastructure_photo/small_office_simulatio.webp", 
+    image: "images/network_infrastructure_photo/small_office_simulation.webp", 
     file: "assets/network_infrastructure/small_office_simulation.pdf" 
 }
 
