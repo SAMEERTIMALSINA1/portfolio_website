@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+html, body {
+  margin: 0;
+  background: #04080a;
+  font-family: 'Share Tech Mono', monospace;
+}
+body {
+  background-image: 
+    linear-gradient(rgba(4, 8, 10, 0.85), rgba(4, 8, 10, 0.85)),
+    url('../assets/run_python_project/number_guessing_game.avif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+}
+
+.terminal-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;   /* was center */
+  min-height: 0;             /* was 0% */
+  width: 100%;
+  margin-top: 32px;          /* control spacing precisely here */
+}
+
+.terminal-container {
+  border: 1px solid #2dd9d9;
+  background: #050b0c;
+  padding: 14px 18px;
+  box-shadow: 0 0 12px rgba(45, 217, 217, 0.15);
+}
+
+.terminal-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #1a3d3d;
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+  color: #2dd9d9;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.terminal-output {
+  background: #000;
+  border: 1px solid #1a3d3d;
+  padding: 16px;
+  color: #6fe0e0;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+h1 {
+  color: #2dd9d9;
+  text-align: center;
+  letter-spacing: 2px;
+  text-shadow: 0 0 8px rgba(45, 217, 217, 0.4);
+}

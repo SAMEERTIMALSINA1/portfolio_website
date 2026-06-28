@@ -8,3 +8,6 @@ css/output.css
 # Operating System Junk
 .DS_Store
 Thumbs.db
+
+# Server configuration for local testing
+server.py

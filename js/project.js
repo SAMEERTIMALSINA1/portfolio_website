@@ -41,7 +41,12 @@ file: "assets/system_admin/installation_of_ubuntu_server.pdf"
     tags: ["Python", "Random Module", "CLI", "Game"],
     color: "green",
     image: "images/python_photo/number_guessing_game.webp",
-    file: "assets/python/number_guessing_game.py"
+    file: "assets/python/number_guessing_game.txt",
+    runnable: true,
+    runType: "cli",
+    runPage: "project_runner/project_runner_for_python.html",
+    runId: "number_guessing_game",
+    runScript: "../assets/run_python_project/number_guessing_game.py",
 },
 
 { 
