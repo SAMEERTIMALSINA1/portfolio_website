@@ -642,8 +642,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 };
 
-
-    // ========================================
+// ========================================
     // 10. RENDER PROJECTS
     // ========================================
     function renderProjects(projects) {
@@ -651,194 +650,95 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!dom.projectsContainer) return;
 
         if (!Array.isArray(projects)) {
-
             dom.projectsContainer.innerHTML =
-                `<p class="text-gray-500">
-                    Invalid project data.
-                </p>`;
-
+                `<p class="text-gray-500">Invalid project data.</p>`;
             return;
-
         }
 
         if (projects.length === 0) {
-
             dom.projectsContainer.innerHTML =
-                `<p class="text-gray-500">
-                    No projects found.
-                </p>`;
-
+                `<p class="text-gray-500">No projects found.</p>`;
             return;
-
         }
 
-        // Build all HTML parts first, then inject once
         const htmlParts = projects.map(project => {
 
-            const safeTitle =
-                sanitizeText(project.title);
+            const safeTitle = sanitizeText(project.title);
+            const safeCategory = sanitizeText(project.category);
+            const safeDescription = sanitizeText(project.description);
+            const safeImage = sanitizeURL(project.image);
+            const safeFile = sanitizeURL(project.file);
+            const safeColor = colorMap[project.color] ? project.color : 'indigo';
+            const styles = colorMap[safeColor];
+            const safeTags = Array.isArray(project.tags) ? project.tags : [];
 
-            const safeCategory =
-                sanitizeText(project.category);
-
-            const safeDescription =
-                sanitizeText(project.description);
-
-            const safeImage =
-                sanitizeURL(project.image);
-
-            const safeFile =
-                sanitizeURL(project.file);
-
-            const safeColor =
-                colorMap[project.color]
-                    ? project.color
-                    : 'indigo';
-
-            const styles =
-                colorMap[safeColor];
-
-            const safeTags =
-                Array.isArray(project.tags)
-                    ? project.tags
-                    : [];
-
-            // Precompute searchable string once at render time
             const searchContent = [
-                safeTitle,
-                safeDescription,
-                safeTags.join(' ')
+                safeTitle, safeDescription, safeTags.join(' ')
             ].join(' ').toLowerCase().trim();
 
             const tagsHTML = safeTags.map(tag => `
-
-                <span class="
-                    px-3 py-1
-                    ${styles.tag}
-                    text-xs
-                    rounded-full
-                    font-medium
-                ">
+                <span class="px-3 py-1 ${styles.tag} text-xs rounded-full font-medium">
                     ${sanitizeText(tag)}
                 </span>
-
             `).join('');
 
+            const actionHTML = project.runnable
+                ? (project.runType === 'gui'
+                    ? `
+                    <a
+                        href="${sanitizeURL(project.repoUrl)}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center px-5 py-2.5 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700"
+                    >
+                        View on GitHub
+                    </a>
+                    `
+                    : `
+                    <button
+                        onclick="runProject('${project.runPage}', '${project.runId}')"
+                        class="inline-flex items-center px-5 py-2.5 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700"
+                    >
+                        Run
+                    </button>
+                    `)
+                : '';
+
             return `
-
             <article
-                class="
-                    project-card
-                    bg-white
-                    shadow-lg
-                    rounded-xl
-                    overflow-hidden
-                "
-
+                class="project-card bg-white shadow-lg rounded-xl overflow-hidden"
                 data-title="${safeTitle.toLowerCase()}"
                 data-description="${safeDescription.toLowerCase()}"
                 data-tags="${safeTags.join(' ').toLowerCase()}"
                 data-search="${searchContent}"
             >
-
                 <div class="md:flex">
-
-                    <div
-                        class="
-                            md:w-1/4
-                            overflow-hidden
-                        "
-                    >
-
+                    <div class="md:w-1/4 overflow-hidden">
                         <img
                             src="${safeImage}"
                             alt="${safeTitle}"
                             loading="lazy"
                             decoding="async"
-                            class="
-                                w-full
-                                h-full
-                                object-cover
-                            "
+                            class="w-full h-full object-cover"
                         >
-
                     </div>
-
                     <div class="p-6 md:w-3/4">
-
-                        <h2
-                            class="
-                                text-2xl
-                                font-bold
-                                text-gray-800
-                                mb-2
-                            "
-                        >
-                            ${safeTitle}
-                        </h2>
-
-                        <p
-                            class="
-                                text-sm
-                                ${styles.text}
-                                mb-3
-                                font-medium
-                            "
-                        >
-                            ${safeCategory}
-                        </p>
-
-                        <p
-                            class="
-                                text-gray-600
-                                mb-4
-                                leading-relaxed
-                            "
-                        >
-                            ${safeDescription}
-                        </p>
-
-                        <div
-                            class="
-                                flex
-                                flex-wrap
-                                gap-2
-                                mb-4
-                            "
-                        >
-                            ${tagsHTML}
-                        </div>
-
-                        <a
+                        <h2 class="text-2xl font-bold text-gray-800 mb-2">${safeTitle}</h2>
+                        <p class="text-sm ${styles.text} mb-3 font-medium">${safeCategory}</p>
+                        <p class="text-gray-600 mb-4 leading-relaxed">${safeDescription}</p>
+                        <div class="flex flex-wrap gap-2 mb-4">${tagsHTML}</div>
+                            <a
                             href="${safeFile}"
                             target="_blank"
                             rel="noopener noreferrer"
-
-                            class="
-                                inline-flex
-                                items-center
-                                px-5
-                                py-2.5
-                                ${styles.button}
-                                text-white
-                                font-semibold
-                                rounded-lg
-                                transition-colors
-                                shadow-md
-                                hover:shadow-lg
-                            "
+                            class="inline-flex items-center px-5 py-2.5 ${styles.button} text-white font-semibold rounded-lg transition-colors shadow-md hover:shadow-lg"
                         >
-
                             View Documentation
-
                         </a>
-
+                        ${actionHTML}
                     </div>
-
                 </div>
-
             </article>
-
             `;
 
         });
@@ -849,6 +749,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
+    // ========================================
+    // 10b. RUN PROJECT HANDLER
+    // ========================================
+    window.runProject = function(runPage, projectId) {
+        window.location.href = `${runPage}?project=${encodeURIComponent(projectId)}`;
+    };
+    
     // ========================================
     // 11. LOAD PROJECTS
     // ========================================
