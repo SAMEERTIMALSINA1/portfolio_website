@@ -89,7 +89,7 @@
     <main id="main" class="pt-16">
 
         <!-- Hero Section -->
-        <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary/5 via-white to-cyan-50">
+        <section id="home" class="relative min-h-screen flex flex-col md:flex-row items-center justify-center overflow-hidden bg-gradient-to-br from-primary/5 via-white to-cyan-50">
             <!-- Animated Background Orbs -->
             <div class="absolute inset-0 pointer-events-none">
                 <div class="absolute top-10 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
@@ -98,7 +98,7 @@
             </div>
 
             <!-- Profile Photo -->
-            <div class="relative z-10 mb-12 animate-fade-in translate-x-10 profile-photo">
+            <div class="relative z-10 mb-12 md:mb-0 md:mr-12 animate-fade-in md:translate-x-10 profile-photo">
                 <div class="w-48 h-48 md:w-64 md:h-64 mx-auto rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl transform hover:scale-105 transition-transform duration-300">
                     <img src="images/general/profile_256.webp" 
                     srcset="
@@ -222,7 +222,7 @@
                             fetchpriority="high"
                             width="600" 
                             height="400" 
-                            class="relative rounded-2xl shadow-2xl w-full max-w-md object-cover h-80">
+                            class="relative rounded-2xl shadow-2xl w-full max-w-md object-cover h-56 md:h-80">
                         </div>
                     </div>
                 </div>
