@@ -1,3 +1,17 @@
+// Dynamically loads PyScript core CSS + JS so it doesn't have to be
+// hardcoded into every page's <head>.
+(function loadPyScript(version = "2026.3.1") {
+    const css = document.createElement("link");
+    css.rel = "stylesheet";
+    css.href = `https://pyscript.net/releases/${version}/core.css`;
+    document.head.appendChild(css);
+
+    const script = document.createElement("script");
+    script.type = "module";
+    script.src = `https://pyscript.net/releases/${version}/core.js`;
+    document.head.appendChild(script);
+})();
+
 function loadProject() {
   const params = new URLSearchParams(window.location.search);
   const projectId = params.get("project");
