@@ -48,6 +48,21 @@ file: "assets/system_admin/installation_of_ubuntu_server.pdf"
     runId: "number_guessing_game",
     runScript: "../assets/run_python_project/number_guessing_game.py",
 },
+{
+    category: "python",
+    title: "Tic Tae Toe",
+    type: "CLI Game • Game Logic",
+    description: "Interactive command-line game where two player can compete with eachother to win game.",
+    tags: ["Python", "CLI", "Game"],
+    color: "green",
+    image: "images/python_photo/tic_tae_toe.webp",
+    file: "assets/python/tic_tae_toe.txt",
+    runnable: true,
+    runType: "cli",
+    runPage: "project_runner/project_runner_for_python.html",
+    runId: "tic_tae_toe",
+    runScript: "../assets/run_python_project/tic_tae_toe.py",
+},
 
 { 
     category: "network-infrastructure", 
