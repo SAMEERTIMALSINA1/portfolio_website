@@ -75,7 +75,7 @@ def win_condition(board):
     elif board[2][0] == board[1][1] == board[0][2] == now_play(): # 753
         return True
     else:
-        return "Draw"
+        return False
     
     
 # Main Game
@@ -108,5 +108,8 @@ while i < 9:
         if win_condition(board) == True:
             print(f"{now_play()} is the winner")
             break
+        else:
+            print("Draw")
+            
     else:
         print(f"{play} has been already played.")
