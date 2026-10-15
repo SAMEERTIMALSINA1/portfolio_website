@@ -17,7 +17,6 @@ def printboard(board):
 
 # Input places of board
 def userplays(board,play):
-    print(play)
     if play == "1":
         board[0][0] = now_play()
     elif play == "2":
@@ -75,7 +74,7 @@ def win_condition(board):
     elif board[2][0] == board[1][1] == board[0][2] == now_play(): # 753
         return True
     else:
-        return False
+        return "draw"
     
     
 # Main Game
@@ -108,7 +107,7 @@ while i < 9:
         if win_condition(board) == True:
             print(f"{now_play()} is the winner")
             break
-        else:
+        elif win_condition(board)== "draw" and i == 9:
             print("Draw")
             
     else:
